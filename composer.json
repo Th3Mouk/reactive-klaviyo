@@ -1,0 +1,33 @@
+{
+  "name": "th3mouk/reactive-klaviyo",
+  "description": "PHP client to send Klaviyo events with Reactive Programming paradigm",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jérémy Marodon",
+      "email": "marodon.jeremy@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3",
+    "ext-json": "*",
+    "rxnet/http-client": "^0.2.0"
+  },
+  "require-dev": {
+    "kahlan/kahlan": "^4.6",
+    "phpro/grumphp": "^0.15.2",
+    "phpstan/phpstan": "^0.11.5",
+    "youdot/coding-standard": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Th3Mouk\\ReactiveKlaviyo\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Th3Mouk\\ReactiveKlaviyo\\Tests\\": "spec/"
+    }
+  }
+}
