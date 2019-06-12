@@ -15,7 +15,7 @@ final class Payload
     /** @var Property[] */
     private $properties = [];
 
-    /** @var int */
+    /** @var int|null */
     private $event_occured_at;
 
     private function __construct(string $event)
@@ -70,7 +70,7 @@ final class Payload
         return $this->properties;
     }
 
-    public function eventOccurredAt(): int
+    public function eventOccurredAt(): ?int
     {
         return $this->event_occured_at;
     }
@@ -99,7 +99,7 @@ final class Payload
     {
         $optional = [];
 
-        if ($this->eventOccurredAt()) {
+        if (null !== $this->eventOccurredAt()) {
             $optional['time'] = $this->eventOccurredAt();
         }
 
