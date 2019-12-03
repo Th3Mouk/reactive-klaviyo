@@ -13,6 +13,7 @@ describe('Payload', function () {
             ->addProperty(Property::create('lang', 'fr'))
             ->addProperty(Property::create('amount', 56))
             ->addProperty(Property::create('domain', 'klaviyo.io'))
+            ->addProperty(Property::create('scalar_list', ['string', 1, 1.0, true]))
             ->definePastEventDate(1559722012)
             ->toArray();
 
@@ -26,6 +27,7 @@ describe('Payload', function () {
                 'lang' => 'fr',
                 'amount' => 56,
                 'domain' => 'klaviyo.io',
+                'scalar_list' => ['string', 1, 1.0, true],
             ],
             'time' => 1559722012,
         ]);

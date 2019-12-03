@@ -8,11 +8,11 @@ final class Property
 {
     /** @var string */
     private $name;
-    /** @var string|string[]|bool|int|float */
+    /** @var string|int|float|bool|array<string|int|float|bool> */
     private $value;
 
     /**
-     * @param string|string[]|bool|int|float $value
+     * @param string|int|float|bool|array<string|int|float|bool> $value
      */
     private function __construct(string $name, $value)
     {
@@ -21,7 +21,7 @@ final class Property
     }
 
     /**
-     * @param string|string[]|bool|int|float $value
+     * @param string|int|float|bool|array<string|int|float|bool> $value
      */
     public static function create(string $name, $value): self
     {
@@ -34,7 +34,7 @@ final class Property
     }
 
     /**
-     * @return string|string[]|bool|int|float
+     * @return string|int|float|bool|array<string|int|float|bool>
      */
     public function value()
     {
