@@ -78,7 +78,7 @@ final class Payload
     /**
      * @param Property[] $properties
      *
-     * @return array<string, string|string[]|bool|int|float>
+     * @return array<string, array<bool|float|int|string>|bool|float|int|string>
      */
     private function reduceProperties(array $properties): array
     {
@@ -93,7 +93,7 @@ final class Payload
     }
 
     /**
-     * @return array<string, string|int|array<string, string|string[]|bool|int|float>>
+     * @return array<string, string|int|array<string, array<bool|float|int|string>|bool|float|int|string>>
      */
     public function toArray(): array
     {
